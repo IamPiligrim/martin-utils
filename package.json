@@ -1,0 +1,15 @@
+{
+  "name": "MartinUtils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.0",
+    "canvas": "^3.2.3",
+    "discord.js": "^14.26.4"
+  }
+}
