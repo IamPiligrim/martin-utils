@@ -8,7 +8,7 @@
 
 # Martin Utils
 
-Discord-бот на [discord.js](https://discord.js.org/), собранный как набор лёгких утилитарных и развлекательных слэш-команд для сервера: обработка изображений (вставка в рамку) и всякая шуточная мелочь вроде генератора деморализующих фактов. Команды подключаются автоматически — новый файл в `src/commands` с полями `data` и `execute` сразу становится рабочей слэш-командой без правок в остальном коде.
+A Discord bot built with [discord.js](https://discord.js.org/), put together as a set of lightweight utility and fun slash commands for a server: image processing (wrapping a picture in a frame) and small joke commands like a demoralizing-facts generator. Commands are loaded automatically — dropping a new file into `src/commands` with `data` and `execute` fields turns it into a working slash command with no other code changes needed.
 
 </td>
 <td width="140" align="right" valign="middle">
@@ -19,54 +19,33 @@ Discord-бот на [discord.js](https://discord.js.org/), собранный к
 
 ---
 
-## Структура и команды
-
-### Структура проекта
+### Project structure
 
 ```
 martin-utils/
-├── config.json              # token и clientId бота (не хранится в git)
 ├── package.json
 ├── media/
-│   ├── frame.png             # золотая рамка для команды /framethis
-│   ├── image 24.png          # header для README
-│   └── 239749018-2.jpeg      # аватар для README
+│   ├── image 24.png            # README header
+│   └── 239749018-2.jpeg        # README avatar
 └── src/
-    ├── bot.js                 # точка входа: загружает команды/события, регистрирует слэш-команды, логинится
-    ├── deploy-commands.js      # отдельный скрипт для (пере)регистрации слэш-команд
+    ├── bot.js                  # entry point: loads commands/events, registers slash commands, logs in
+    ├── deploy-commands.js      # standalone script to (re)register slash commands
     ├── commands/
     │   ├── image/
-    │   │   └── framethis.js    # /framethis
+    │   │   └── framethis.js     # /framethis
     │   └── misc/
-    │       └── demoralize.js   # /demoralize
+    │       └── demoralize.js    # /demoralize
     ├── events/
-    │   ├── ready.js            # лог при успешном логине
-    │   └── interactionCreate.js # обработка вызова слэш-команд
+    │   ├── ready.js             # logs a message once the bot is logged in
+    │   └── interactionCreate.js # handles slash command invocations
     └── media/
-        └── frame.png
+        └── frame.png            # golden frame used by /framethis
 ```
 
-Все команды подгружаются автоматически из `src/commands/**` — новая команда достаточно добавить файлом с полями `data` и `execute`.
+### Commands
 
-### Команды
-
-| Команда | Категория | Описание |
+| Command | Category | Description |
 |---|---|---|
-| `/framethis image:<файл>` | image | Вставляет присланное изображение в золотую рамку (`media/frame.png`), автоматически определяя прозрачную область рамки |
-| `/demoralize` | misc | Присылает случайный деморализующий факт из заранее заданного списка |
+| `/framethis image:<file>` | image | Wraps the supplied image in a golden frame (`media/frame.png`), automatically detecting the frame's transparent area |
+| `/demoralize` | misc | Sends a random demoralizing fact from a predefined list |
 
-### Запуск
-
-```bash
-npm install
-node src/bot.js
-```
-
-Перед запуском нужно создать `config.json` в корне проекта:
-
-```json
-{
-  "token": "TOKEN_БОТА",
-  "clientId": "ID_ПРИЛОЖЕНИЯ"
-}
-```
