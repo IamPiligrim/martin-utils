@@ -8,7 +8,9 @@
 
 # Martin Utils
 
-A Discord bot built with [discord.js](https://discord.js.org/), put together as a set of lightweight utility and fun slash commands for a server: image processing (wrapping a picture in a frame) and small joke commands like a demoralizing-facts generator. Commands are loaded automatically — dropping a new file into `src/commands` with `data` and `execute` fields turns it into a working slash command with no other code changes needed.
+A Discord bot built with [discord.js](https://discord.js.org/), put together as a set of lightweight utility and fun slash commands for a server: 
+image processing (wrapping a picture in a frame) and small joke commands like a demoralizing-facts generator.
+I'll be add new fun stuff when i find a good idea for this. You also can contribute to this project, see more at [CONTRIBUTING.md](CONTRIBUTING.md).
 
 </td>
 <td width="140" align="right" valign="middle">
