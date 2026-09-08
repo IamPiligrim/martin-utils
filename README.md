@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/image 24.png" alt="Martin Utils header" width="100%">
+  <img src="media/avatar.png" alt="Martin Utils header" width="100%">
 </p>
 
 <table>
@@ -14,7 +14,7 @@ I'll be add new fun stuff when i find a good idea for this. You also can contrib
 
 </td>
 <td width="140" align="right" valign="middle">
-  <img src="media/239749018-2.jpeg" alt="Martin Utils avatar" width="120" height="120" style="border-radius:50%">
+  <img src="media/header.jpeg" alt="Martin Utils avatar" width="120" height="120" style="border-radius:50%">
 </td>
 </tr>
 </table>
@@ -26,9 +26,6 @@ I'll be add new fun stuff when i find a good idea for this. You also can contrib
 ```
 martin-utils/
 ├── package.json
-├── media/
-│   ├── image 24.png            # README header
-│   └── 239749018-2.jpeg        # README avatar
 └── src/
     ├── bot.js                  # entry point: loads commands/events, registers slash commands, logs in
     ├── deploy-commands.js      # standalone script to (re)register slash commands
