@@ -2,6 +2,8 @@
 
 Thanks for considering a contribution! This is a small Discord bot, so the process is kept light on purpose.
 
+By participating in this project, you're expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## Getting set up
 
 1. Fork the repo and clone your fork.
