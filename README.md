@@ -31,7 +31,8 @@ martin-utils/
     ├── deploy-commands.js      # standalone script to (re)register slash commands
     ├── commands/
     │   ├── image/
-    │   │   └── framethis.js     # /framethis
+    │   │   ├── framethis.js     # /framethis
+    │   │   └── omglook.js       # /omglook
     │   └── misc/
     │       ├── demoralize.js    # /demoralize
     │       ├── gaymetr.js       # /gaymetr
@@ -40,7 +41,8 @@ martin-utils/
     │   ├── ready.js             # logs a message once the bot is logged in
     │   └── interactionCreate.js # handles slash command invocations
     └── media/
-        └── frame.png            # golden frame used by /framethis
+        ├── frame.png            # golden frame used by /framethis
+        └── omglook/             # left.png / right.png used by /omglook
 ```
 
 ### Commands
@@ -48,6 +50,7 @@ martin-utils/
 | Command | Category | Description |
 |---|---|---|
 | `/framethis image:<file>` | image | Wraps the supplied image in a golden frame (`media/frame.png`), automatically detecting the frame's transparent area |
+| `/omglook image:<file>` | image | Puts the supplied image between two surprised guys (`media/omglook/left.png` and `right.png`) on a white background |
 | `/demoralize` | misc | Sends a random demoralizing fact from a predefined list |
 | `/gaymetr [user:<user>]` | misc | Joke command: replies with a random "% gay" value for the chosen user (or yourself) |
 | `/stupidlaw` | misc | Sends an embed with a random weird real-world law and its punishment |
