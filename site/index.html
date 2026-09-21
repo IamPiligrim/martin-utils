@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Martin Utils</title>
+    <meta name="description" content="A Discord bot with lightweight utility and fun slash commands.">
+    <link rel="icon" href="logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <img class="logo" src="logo.jpeg" alt="Martin Utils logo" width="120" height="120">
+        <h1>Martin Utils</h1>
+        <p>A Discord bot with lightweight utility and fun slash commands: image processing and small joke commands for your server.</p>
+        <div class="actions">
+            <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1490666684103659663" target="_blank" rel="noopener">Invite bot</a>
+            <a class="btn" href="https://github.com/IamPiligrim/martin-utils" id="repo-link">GitHub</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Commands</h2>
+            <input id="search" type="search" placeholder="Search commands…" aria-label="Search commands">
+            <div id="commands" class="grid"></div>
+            <p id="empty" class="muted" hidden>Nothing found.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p class="muted">Martin Utils · <a href="https://github.com/IamPiligrim/martin-utils" id="repo-link-footer">Contribute</a></p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
