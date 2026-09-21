@@ -9,7 +9,7 @@
 # Martin Utils
 
 A Discord bot built with [discord.js](https://discord.js.org/), put together as a set of lightweight utility and fun slash commands for a server: 
-image processing (wrapping a picture in a frame) and small joke commands like a demoralizing-facts generator.
+image processing (wrapping a picture in a frame) and small joke commands (demoralizing facts, a "gay meter", absurd real-world laws).
 I'll be add new fun stuff when i find a good idea for this. You also can contribute to this project, see more at [CONTRIBUTING.md](CONTRIBUTING.md).
 
 </td>
@@ -33,7 +33,9 @@ martin-utils/
     │   ├── image/
     │   │   └── framethis.js     # /framethis
     │   └── misc/
-    │       └── demoralize.js    # /demoralize
+    │       ├── demoralize.js    # /demoralize
+    │       ├── gaymetr.js       # /gaymetr
+    │       └── stupidlaw.js     # /stupidlaw
     ├── events/
     │   ├── ready.js             # logs a message once the bot is logged in
     │   └── interactionCreate.js # handles slash command invocations
@@ -47,4 +49,5 @@ martin-utils/
 |---|---|---|
 | `/framethis image:<file>` | image | Wraps the supplied image in a golden frame (`media/frame.png`), automatically detecting the frame's transparent area |
 | `/demoralize` | misc | Sends a random demoralizing fact from a predefined list |
-
+| `/gaymetr [user:<user>]` | misc | Joke command: replies with a random "% gay" value for the chosen user (or yourself) |
+| `/stupidlaw` | misc | Sends an embed with a random weird real-world law and its punishment |
